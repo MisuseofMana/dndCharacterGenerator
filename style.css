@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica&display=swap');
+
+body {
+    width:100vw;
+    height:100vh;
+    margin:0;
+    padding:0;
+    text-align:center;
+    display:flex;
+}
+
+h1 {
+    font-family: 'IM Fell Double Pica', serif;
+}
+
+main {
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.wrapper {
+    height:80vh;
+    width:80%;
+}
+
+.charSheet {
+    border:solid black 2px;
+}
+
+.buttons {
+    margin:10px;
+}
+
