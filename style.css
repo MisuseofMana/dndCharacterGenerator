@@ -9,10 +9,14 @@ body {
     display:flex;
 }
 
-h1 {
+h1, p{
     font-family: 'IM Fell Double Pica', serif;
+    margin:5px;
 }
 
+p{
+   font-size:15px; 
+}
 main {
     width:100%;
     display:flex;
@@ -31,5 +35,39 @@ main {
 
 .buttons {
     margin:10px;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:space-evenly;
+    padding:10px;
+}
+
+.buttons section {
+    display:flex;
+    flex-direction: column-reverse;
+    justify-content:center;
+    align-items: center;
+}
+
+.buttons button {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height:50px;
+    margin:5px;
+    padding:10px;
+    text-transform: uppercase;
+    background:rgb(223, 223, 223);
+    color:black;
+    border:none;
+    font-size:20px;
+}
+
+.buttons button:hover {
+    background:rgb(35, 84, 117);
+    color:white;
+    cursor:pointer;
+}
+
+.buttons img {
+    margin-bottom:10px;
+    width:50px;
 }
 
