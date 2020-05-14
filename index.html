@@ -14,84 +14,111 @@
 			<section>
 				<h1>BARE BONES NONSENSE DND 5E</h1>
 				<p>
-					Whip up a random hulking brute of a barbarian, or a spellwise sorcerer at the click of a button.
-					Tap a class button below to be randomly assigned a bare bones DnD character. Consider it a starting point
-					and you can fill in the rest, use what you like or take inspiration from what you roll up.
+					A random character generator for DnD 5e, can be used as a starting point for
+					a new character, or for simple amusement. <a href="https://www.dnd5eapi.co/" target="_blank">Uses 	the D&D 5e API.</a> 
 				</p>
 			</section>
 
 			<section class="buttons">
-				<section id="barbarian" onclick="makeCharacter(this.id)">
-					<button>Barbarian</button>
+				<section id="barbarian" onclick="getCharacter(this.id)">
+					<p>Barbarian</p>
 					<img src="./assets/barbarian.png">
 				</section>
 
-				<section id="bard" onclick="makeCharacter(this.id)">
-					<button>Bard</button>
+				<section id="bard" onclick="getCharacter(this.id)">
+					<p>Bard</p>
 					<img src="./assets/bard.png">
 				</section>
 
 
-				<section id="cleric" onclick="makeCharacter(this.id)">
-					<button>Cleric</button>
+				<section id="cleric" onclick="getCharacter(this.id)">
+					<p>Cleric</p>
 					<img src="./assets/cleric.png">
 				</section>
 
-				<section id="druid" onclick="makeCharacter(this.id)">
-					<button>Druid</button>
+				<section id="druid" onclick="getCharacter(this.id)">
+					<p>Druid</p>
 					<img src="./assets/druid.png">
 				</section>
 
-				<section id="fighter" onclick="makeCharacter(this.id)">
-					<button>Fighter</button>
+				<section id="fighter" onclick="getCharacter(this.id)">
+					<p>Fighter</p>
 					<img src="./assets/fighter.png">
 				</section>
 
-				<section id="monk" onclick="makeCharacter(this.id)">
-					<button>Monk</button>
+				<section id="monk" onclick="getCharacter(this.id)">
+					<p>Monk</p>
 					<img src="./assets/monk.png">
 				</section>
 
-				<section id="paladin" onclick="makeCharacter(this.id)">
-					<button>Paladin</button>
+				<section id="paladin" onclick="getCharacter(this.id)">
+					<p>Paladin</p>
 					<img src="./assets/paladin.png">
 				</section>
 
-				<section id="ranger" onclick="makeCharacter(this.id)">
-					<button>Ranger</button>
+				<section id="ranger" onclick="getCharacter(this.id)">
+					<p>Ranger</p>
 					<img src="./assets/ranger.png">
 				</section>
 
-				<section id="rogue" onclick="makeCharacter(this.id)">
-					<button>Rogue</button>
+				<section id="rogue" onclick="getCharacter(this.id)">
+					<p>Rogue</p>
 					<img src="./assets/rogue.png">
 				</section>
 
-				<section id="sorcerer" onclick="makeCharacter(this.id)">
-					<button>Sorcerer</button>
+				<section id="sorcerer" onclick="getCharacter(this.id)">
+					<p>Sorcerer</p>
 					<img src="./assets/sorcerer.png">
 				</section>
 
-				<section id="warlock" onclick="makeCharacter(this.id)">
-					<button>Warlock</button>
+				<section id="warlock" onclick="getCharacter(this.id)">
+					<p>Warlock</p>
 					<img src="./assets/warlock.png">
 				</section>
 
-				<section id="wizard" onclick="makeCharacter(this.id)">
-					<button>Wizard</button>
+				<section id="wizard" onclick="getCharacter(this.id)">
+					<p>Wizard</p>
 					<img src="./assets/wizard.png">
 				</section>
 			</section>
 
 			<section class="charSheet">
-				<section id="something">Name</section>
-				<section id="something">Class</section>
-				<section id="something">Race</section>
-				<section id="something">Appearance</section>
-				<section id="something">Hit Die</section>
-				<section id="something">Proficiencies</section>
-				<section id="something">Saving Throws</section>
-				<section id="something">Starting Equipment</section>
+				<section>
+					<p>Name:</p>
+					<p id="name"></p>
+				</section>
+				<section>
+					<p>Class:</p>
+					<p id="class"></p> 
+				</section>
+				<section>
+					<p>Race:</p>
+					<p id="race"></p> 
+				</section>
+				<section>
+					<p>Alignment Suggestion:</p>
+					<p id="alignment"></p>
+				</section>
+				<section>
+					<p>Appearance:</p>
+					<p id="appearance"></p> 
+				</section>
+				<section>
+					<p>Hit Die:</p>
+					<p id="hitdie"></p> 
+				</section>
+				<section>
+					<p>Proficiencies:</p>
+					<p id="prof"></p> 
+				</section>
+				<section>
+					<p>Saving Throws:</p>
+					<p id="saveThrow"></p> 
+				</section>
+				<section>
+					<p>Equipment:</p>
+					<p id="equipment"></p> 
+				</section>
 			</section>
 
 		</section>
