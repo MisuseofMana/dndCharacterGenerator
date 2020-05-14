@@ -9,7 +9,7 @@ body {
     display:flex;
 }
 
-h1, p{
+h1, h2, p{
     font-family: 'IM Fell Double Pica', serif;
     margin:5px;
 }
@@ -31,10 +31,6 @@ main {
 .wrapper {
     height:80vh;
     width:80%;
-}
-
-.charSheet {
-    border:solid black 2px;
 }
 
 .buttons {  
@@ -83,3 +79,37 @@ main {
     text-transform:uppercase;
 }
 
+.charSheet {
+    width:80%;
+    margin:0 auto;
+    padding:10px 0;
+    border:solid black 2px;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows:1fr 5fr;
+    grid-gap: 10px;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+}
+
+.charSheet section section{
+    background:rgb(223, 223, 223);
+}
+
+#header {
+    grid-column: 1/7;
+    grid-row: 1/2;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+#header section {
+    min-width:25%;
+}
+
+#header h2 {
+    font-size:40px;
+}
+#header p {
+    font-size:20px;
+}
