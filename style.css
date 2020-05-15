@@ -31,6 +31,7 @@ main {
 .wrapper {
     height:80vh;
     width:80%;
+    min-width:1000px;
 }
 
 .buttons {  
@@ -80,13 +81,12 @@ main {
 }
 
 .charSheet {
-    width:80%;
     margin:0 auto;
-    padding:10px 0;
+    padding:10px 0px;
     border:solid black 2px;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows:1fr 5fr;
+    grid-template-rows:100px 1fr 1fr;
     grid-gap: 10px;
     grid-row-gap: 10px;
     grid-column-gap: 10px;
@@ -94,6 +94,7 @@ main {
 
 .charSheet section section{
     background:rgb(223, 223, 223);
+    padding:0 10px;
 }
 
 #header {
@@ -103,13 +104,39 @@ main {
     justify-content: space-evenly;
 }
 
-#header section {
-    min-width:25%;
+#header section, #middle section {
+    min-width:20%;
+    max-width:20%;
 }
 
 #header h2 {
     font-size:40px;
 }
+#middle h2 {
+    font-size:30px;
+}
+#hitWrap p {
+    font-size:50px;
+}
 #header p {
     font-size:20px;
+}
+
+#middle {
+    grid-column: 1/7;
+    grid-row: 2/3;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+#bottom section {
+    min-width:93%;
+    max-width:93%;
+}
+
+#bottom {
+    grid-column: 1/7;
+    grid-row: 3/4;
+    display:flex;
+    justify-content: space-evenly;
 }

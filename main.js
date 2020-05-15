@@ -104,7 +104,7 @@ function makeCharacter(whatToRun) {
     else if (whatToRun === 'equip') {
         let equiphandlerIndex = fetchData.findIndex(o => o.type === 'equip');
         let equiphandler = fetchData[equiphandlerIndex].gotInfo;
-        console.log('Race Data Handler');
+        console.log('Equip Handler');
         console.log(equiphandler);
 
         let domEquip = document.getElementById('equipment');
@@ -113,6 +113,29 @@ function makeCharacter(whatToRun) {
             let newItem = document.createElement('p');
             domEquip.appendChild(newItem);
             newItem.innerText = `${gear.item.name} x${gear.quantity}`;
+        }
+
+        let domEquipChoices = document.getElementById('equipChoice');
+        domEquipChoices.innerHTML = '';
+
+        //loop through choice_1 to choice_max
+            //loop through each choice index max
+            //create section
+                //create header h3
+                //print how many to choose amount to h3
+
+                //create ul
+                //create li with for loop, push to the ul
+                    //print from array item.name + quantity
+
+        for (let i=1; i <= equiphandler.choices_to_make; i++){
+            let newChoice = document.createElement('section');
+            domEquipChoices.appendChild(newChoice);
+            let howMany = document.createElement('h3');
+            newChoice.appendChild(howMany);
+            for (let c=1; i <= equiphandler.choices_to_make; c++){
+                
+            }
         }
     }
     else if (whatToRun === 'name') {
