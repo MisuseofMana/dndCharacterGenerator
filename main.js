@@ -6,21 +6,7 @@ let fetchData = [
     {type:'races', gotInfo:undefined},
     {type:'raceData', gotInfo:undefined},
     {type:'equip', gotInfo:undefined},
-
 ]
-
-class NewCharacter {
-    constructor(name, charClass, charRace, appearance, hitdie, prof, saveThrows, equipment){
-        this.name = name;
-        this.charClass = charClass;
-        this.charRace = charRace;
-        this.appearance = appearance;
-        this.hitdie = hitdie;
-        this.prof = prof;
-        this.saveThrows = saveThrows;
-        this.equipment = equipment;
-    }
-}
 
 const getData = (path, context) => {
     fetch(path)
@@ -115,8 +101,8 @@ function makeCharacter(whatToRun) {
             newItem.innerText = `${gear.item.name} x${gear.quantity}`;
         }
 
-        let domEquipChoices = document.getElementById('equipChoice');
-        domEquipChoices.innerHTML = '';
+        // let domEquipChoices = document.getElementById('equipChoice');
+        // domEquipChoices.innerHTML = '';
 
         //loop through choice_1 to choice_max
             //loop through each choice index max
@@ -128,15 +114,25 @@ function makeCharacter(whatToRun) {
                 //create li with for loop, push to the ul
                     //print from array item.name + quantity
 
-        for (let i=1; i <= equiphandler.choices_to_make; i++){
-            let newChoice = document.createElement('section');
-            domEquipChoices.appendChild(newChoice);
-            let howMany = document.createElement('h3');
-            newChoice.appendChild(howMany);
-            for (let c=1; i <= equiphandler.choices_to_make; c++){
-                
-            }
-        }
+        // for (let i=1; i <= equiphandler.choices_to_make; i++){
+        //     let newChoice = document.createElement('section');
+        //     domEquipChoices.appendChild(newChoice);
+        //     let howMany = document.createElement('h3');
+        //     newChoice.appendChild(howMany);
+
+        //     for (let c=1; i <= equiphandler.choice_+c; c++){
+        //         for(let n=0; n <= equiphandler.choice_+c.length; n++) {
+        //             let newSplit = document.createElement('ul');
+        //             newChoice.appendChild(newSplit);
+        //             for(let x=0; x<=equiphandler.choice_+c.from.length; x++ ){
+        //                 let newItem = document.createElement('li');
+        //                 newSplit.appendChild(newItem);
+        //                 newItem.innerText = equiphandler.choice_+c.from[x].item.name;
+
+        //             }
+        //         }
+        //     }
+        // }
     }
     else if (whatToRun === 'name') {
         let namehandlerIndex = fetchData.findIndex(o => o.type === 'name');
