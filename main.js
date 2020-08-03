@@ -1,5 +1,6 @@
 'use strict'
 
+// array holding objects for storing information about 
 let fetchData = [
     {type:'name', gotInfo:undefined}, 
     {type:'baseData', gotInfo:undefined},
@@ -8,6 +9,7 @@ let fetchData = [
     {type:'equip', gotInfo:undefined},
 ]
 
+// a function that gets data based on the arguments passed
 const getData = (path, context) => {
     fetch(path)
     .then(res => res.json())
@@ -20,18 +22,19 @@ const getData = (path, context) => {
     });
 } 
 
+// a function that populates the global variables with data from APIs
 function getCharacter(whosClicked) {    
     getData('https://www.dnd5eapi.co/api/classes/' + whosClicked, 'baseData');
     getData('https://www.dnd5eapi.co/api/races/', 'races')
     getData('https://randomuser.me/api/?inc=gender,name&&nat=us,dk,fr,gb,br,no', 'name');
 }
 
+// a function that behaves based on the argument passed
+// creates and populates element in the dom with infor fetched from the api
 function makeCharacter(whatToRun) {
     if(whatToRun === 'baseData') {
         let basehandlerIndex = fetchData.findIndex(o => o.type === 'baseData');
         let basehandler = fetchData[basehandlerIndex].gotInfo;
-        console.log('Base Handler');
-        console.log(basehandler);
 
         let domClass = document.getElementById('class');
         domClass.innerText = basehandler.name;
@@ -61,8 +64,6 @@ function makeCharacter(whatToRun) {
     else if(whatToRun === 'races') {
         let racehandlerIndex = fetchData.findIndex(o => o.type === 'races');
         let racehandler = fetchData[racehandlerIndex].gotInfo;
-        console.log('Race Handler');
-        console.log(racehandler);
 
         let randomNumber;
 
@@ -81,8 +82,6 @@ function makeCharacter(whatToRun) {
     else if (whatToRun === 'raceData') {
         let raceDatahandlerIndex = fetchData.findIndex(o => o.type === 'raceData');
         let raceDatahandler = fetchData[raceDatahandlerIndex].gotInfo;
-        console.log('Race Data Handler');
-        console.log(raceDatahandler);
 
         let alignSugg = document.getElementById('alignment');
         alignSugg.innerText = raceDatahandler.alignment;
@@ -90,8 +89,6 @@ function makeCharacter(whatToRun) {
     else if (whatToRun === 'equip') {
         let equiphandlerIndex = fetchData.findIndex(o => o.type === 'equip');
         let equiphandler = fetchData[equiphandlerIndex].gotInfo;
-        console.log('Equip Handler');
-        console.log(equiphandler);
 
         let domEquip = document.getElementById('equipment');
         domEquip.innerHTML = '';
@@ -137,14 +134,13 @@ function makeCharacter(whatToRun) {
     else if (whatToRun === 'name') {
         let namehandlerIndex = fetchData.findIndex(o => o.type === 'name');
         let namehandler = fetchData[namehandlerIndex].gotInfo;
-        console.log('Name Handler');
-        console.log(namehandler);
 
         let domName = document.getElementById('name');
         domName.innerText = namehandler.results[0].name.first + ' ' + namehandler.results[0].name.last;
     }
 }
 
+// generates random number based on argument passed
 function randomNum(max){
     return Math.floor(Math.random() * (max - 1) + 1);
 }
